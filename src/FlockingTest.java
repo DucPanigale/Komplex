@@ -15,42 +15,37 @@ class FlockingTest {
         // get count before method was executed
         int boidsCount = flock.boids.size();
 
-
         int oldCount = flocking.counter;
         System.out.println(oldCount);
 
-
         try {
             Robot robot = new Robot();
-
-            // Simulate a mouse click
-            //robot.mousePress(InputEvent.BUTTON1_MASK);
-            //robot.mouseRelease(InputEvent.BUTTON1_MASK);
-
             // Simulate a key press
             robot.keyPress(KeyEvent.VK_A);
             robot.keyRelease(KeyEvent.VK_A);
-
-
-
-            assertEquals(oldCount+1,flocking.counter);
+            //assertEquals(oldCount+1,flocking.counter);
+            flocking.keyPressed();
+            // one boid was created;
+            assertEquals(1,boidsCount+1);
 
         } catch (AWTException e) {
             System.out.println(e);
         }
 
-
-        flocking.keyPressed();
-        // one boid was created;
-        assertEquals(1,boidsCount+1);
-
-        // todo: geht das iwie anders?
-
     }
 
     @org.junit.jupiter.api.Test
     void testMousePressed() {
+        Flocking.Flock flock = new Flocking.Flock();
+        Flocking flocking = new Flocking();
+        // mouseButton right
+        try{
 
+        }catch (Exception ex){
+            System.out.println(ex);
+        }
+
+        // mouseButton left
 /*        try{
 
             Robot robot = new Robot();
