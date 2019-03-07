@@ -33,7 +33,7 @@ class FlockingTest {
 
 
 
-           // assertEquals(oldCount+1,flocking.counter);
+            assertEquals(oldCount+1,flocking.counter);
 
         } catch (AWTException e) {
             System.out.println(e);
